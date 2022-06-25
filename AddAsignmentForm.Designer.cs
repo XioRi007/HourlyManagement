@@ -56,10 +56,10 @@
             this.SubmitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.SubmitBtn.Location = new System.Drawing.Point(180, 490);
+            this.SubmitBtn.Location = new System.Drawing.Point(203, 489);
             this.SubmitBtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.SubmitBtn.Name = "SubmitBtn";
-            this.SubmitBtn.Size = new System.Drawing.Size(150, 41);
+            this.SubmitBtn.Size = new System.Drawing.Size(106, 41);
             this.SubmitBtn.TabIndex = 0;
             this.SubmitBtn.Text = "Додати";
             this.SubmitBtn.UseVisualStyleBackColor = true;
@@ -77,30 +77,30 @@
             "зменшення",
             "збільшення",
             "продовження"});
-            this.TypeComboBox.Location = new System.Drawing.Point(254, 14);
+            this.TypeComboBox.Location = new System.Drawing.Point(126, 14);
             this.TypeComboBox.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.TypeComboBox.Name = "TypeComboBox";
-            this.TypeComboBox.Size = new System.Drawing.Size(236, 31);
+            this.TypeComboBox.Size = new System.Drawing.Size(364, 31);
             this.TypeComboBox.TabIndex = 1;
             // 
             // DateFromDateTimePicker
             // 
             this.DateFromDateTimePicker.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.DateFromDateTimePicker.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DateFromDateTimePicker.Location = new System.Drawing.Point(254, 63);
+            this.DateFromDateTimePicker.Location = new System.Drawing.Point(126, 63);
             this.DateFromDateTimePicker.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.DateFromDateTimePicker.Name = "DateFromDateTimePicker";
-            this.DateFromDateTimePicker.Size = new System.Drawing.Size(236, 32);
+            this.DateFromDateTimePicker.Size = new System.Drawing.Size(364, 32);
             this.DateFromDateTimePicker.TabIndex = 2;
             // 
             // DateToDateTimePicker
             // 
             this.DateToDateTimePicker.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.DateToDateTimePicker.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DateToDateTimePicker.Location = new System.Drawing.Point(254, 113);
+            this.DateToDateTimePicker.Location = new System.Drawing.Point(126, 113);
             this.DateToDateTimePicker.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.DateToDateTimePicker.Name = "DateToDateTimePicker";
-            this.DateToDateTimePicker.Size = new System.Drawing.Size(236, 32);
+            this.DateToDateTimePicker.Size = new System.Drawing.Size(364, 32);
             this.DateToDateTimePicker.TabIndex = 3;
             // 
             // DepartmentComboBox
@@ -109,10 +109,10 @@
             this.DepartmentComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DepartmentComboBox.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DepartmentComboBox.FormattingEnabled = true;
-            this.DepartmentComboBox.Location = new System.Drawing.Point(254, 214);
+            this.DepartmentComboBox.Location = new System.Drawing.Point(126, 214);
             this.DepartmentComboBox.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.DepartmentComboBox.Name = "DepartmentComboBox";
-            this.DepartmentComboBox.Size = new System.Drawing.Size(236, 31);
+            this.DepartmentComboBox.Size = new System.Drawing.Size(364, 31);
             this.DepartmentComboBox.TabIndex = 5;
             // 
             // tableLayoutPanel1
@@ -121,8 +121,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.JobComboBox, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.PurposeComboBox, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 8);
@@ -144,15 +144,15 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11124F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11124F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11124F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11124F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11124F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11124F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11013F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11124F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11124F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11123F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11123F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11123F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11123F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11123F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11123F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11012F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11123F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11123F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(496, 457);
             this.tableLayoutPanel1.TabIndex = 9;
             // 
@@ -170,10 +170,10 @@
             "доцент",
             "професор",
             "член"});
-            this.JobComboBox.Location = new System.Drawing.Point(254, 164);
+            this.JobComboBox.Location = new System.Drawing.Point(126, 164);
             this.JobComboBox.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.JobComboBox.Name = "JobComboBox";
-            this.JobComboBox.Size = new System.Drawing.Size(236, 31);
+            this.JobComboBox.Size = new System.Drawing.Size(364, 31);
             this.JobComboBox.TabIndex = 18;
             // 
             // PurposeComboBox
@@ -181,10 +181,10 @@
             this.PurposeComboBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PurposeComboBox.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PurposeComboBox.FormattingEnabled = true;
-            this.PurposeComboBox.Location = new System.Drawing.Point(254, 264);
+            this.PurposeComboBox.Location = new System.Drawing.Point(126, 264);
             this.PurposeComboBox.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.PurposeComboBox.Name = "PurposeComboBox";
-            this.PurposeComboBox.Size = new System.Drawing.Size(236, 31);
+            this.PurposeComboBox.Size = new System.Drawing.Size(364, 31);
             this.PurposeComboBox.TabIndex = 17;
             // 
             // label8
@@ -193,7 +193,7 @@
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Location = new System.Drawing.Point(3, 400);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(242, 57);
+            this.label8.Size = new System.Drawing.Size(114, 57);
             this.label8.TabIndex = 16;
             this.label8.Text = "Дата наказу";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -204,7 +204,7 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Location = new System.Drawing.Point(3, 350);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(242, 50);
+            this.label7.Size = new System.Drawing.Size(114, 50);
             this.label7.TabIndex = 15;
             this.label7.Text = "Номер наказу";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -215,7 +215,7 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Location = new System.Drawing.Point(3, 250);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(242, 50);
+            this.label6.Size = new System.Drawing.Size(114, 50);
             this.label6.TabIndex = 14;
             this.label6.Text = "Ціль";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -226,7 +226,7 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Location = new System.Drawing.Point(3, 200);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(242, 50);
+            this.label5.Size = new System.Drawing.Size(114, 50);
             this.label5.TabIndex = 13;
             this.label5.Text = "Підрозділ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -238,7 +238,7 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Location = new System.Drawing.Point(3, 150);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(242, 50);
+            this.label4.Size = new System.Drawing.Size(114, 50);
             this.label4.TabIndex = 12;
             this.label4.Text = "Посада";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -249,7 +249,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Location = new System.Drawing.Point(3, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(242, 50);
+            this.label3.Size = new System.Drawing.Size(114, 50);
             this.label3.TabIndex = 11;
             this.label3.Text = "Дата до";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -260,7 +260,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Location = new System.Drawing.Point(3, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(242, 50);
+            this.label2.Size = new System.Drawing.Size(114, 50);
             this.label2.TabIndex = 10;
             this.label2.Text = "Дата з";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -270,18 +270,18 @@
             // 
             this.DocumentDateDateTimePicker.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.DocumentDateDateTimePicker.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DocumentDateDateTimePicker.Location = new System.Drawing.Point(254, 420);
+            this.DocumentDateDateTimePicker.Location = new System.Drawing.Point(126, 420);
             this.DocumentDateDateTimePicker.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.DocumentDateDateTimePicker.Name = "DocumentDateDateTimePicker";
-            this.DocumentDateDateTimePicker.Size = new System.Drawing.Size(236, 32);
+            this.DocumentDateDateTimePicker.Size = new System.Drawing.Size(364, 32);
             this.DocumentDateDateTimePicker.TabIndex = 4;
             // 
             // DocumentNumberTextBox
             // 
             this.DocumentNumberTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.DocumentNumberTextBox.Location = new System.Drawing.Point(251, 365);
+            this.DocumentNumberTextBox.Location = new System.Drawing.Point(123, 365);
             this.DocumentNumberTextBox.Name = "DocumentNumberTextBox";
-            this.DocumentNumberTextBox.Size = new System.Drawing.Size(242, 32);
+            this.DocumentNumberTextBox.Size = new System.Drawing.Size(370, 32);
             this.DocumentNumberTextBox.TabIndex = 8;
             // 
             // label1
@@ -290,7 +290,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 50);
+            this.label1.Size = new System.Drawing.Size(114, 50);
             this.label1.TabIndex = 9;
             this.label1.Text = "Тип";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -298,9 +298,9 @@
             // HoursTextBox
             // 
             this.HoursTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.HoursTextBox.Location = new System.Drawing.Point(251, 315);
+            this.HoursTextBox.Location = new System.Drawing.Point(123, 315);
             this.HoursTextBox.Name = "HoursTextBox";
-            this.HoursTextBox.Size = new System.Drawing.Size(242, 32);
+            this.HoursTextBox.Size = new System.Drawing.Size(370, 32);
             this.HoursTextBox.TabIndex = 19;
             // 
             // label9
@@ -309,14 +309,13 @@
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Location = new System.Drawing.Point(3, 300);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(242, 50);
+            this.label9.Size = new System.Drawing.Size(114, 50);
             this.label9.TabIndex = 20;
             this.label9.Text = "Години";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AddAsignmentForm
             // 
-            this.Icon = Properties.Resources.Hourglass;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
@@ -324,6 +323,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.SubmitBtn);
             this.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Icon = global::HourlyManagment.Properties.Resources.Hourglass;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "AddAsignmentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

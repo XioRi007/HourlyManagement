@@ -39,7 +39,7 @@ namespace HourlyManagment
         public static string FullNameInAkkuzative(string name, string gender)
         {
             NameCaseLib.Gender g = GetGender(gender);
-            name = ua.Q(name, NameCaseLib.Padeg.UaRodovyi, g);
+            name = ua.Q(name, NameCaseLib.Padeg.UaZnahidnyi, g);
             return name;
         }
         public static string SpecialInfoInDative(string info)
@@ -80,12 +80,12 @@ namespace HourlyManagment
             {
                 if(posada.IndexOf("в.о.") != -1)
                 {
-                    return $"в.о. завідувача " + DepartmentInAkkuzative(pidrozdil) +
+                    return $"в.о. завідувача " + DepartmentInGenitive(pidrozdil) +
                         JobInDative(posada.Substring(posada.LastIndexOf(" ") + 1), "");
                 }
                 else
                 {
-                    return $"завідувачу " + DepartmentInAkkuzative(pidrozdil) +
+                    return $"завідувачу " + DepartmentInGenitive(pidrozdil) +
                         JobInDative(posada.Substring(posada.LastIndexOf(" ") + 1), "");
                 }
             }
@@ -178,14 +178,14 @@ namespace HourlyManagment
 
 
             //склоняем место работы
-            pidrozdil = DepartmentInAkkuzative(pidrozdil);
+            pidrozdil = DepartmentInGenitive(pidrozdil);
 
             //результат
             res = posada + " " + pidrozdil;
 
             return res;
         }
-        public static string DepartmentInAkkuzative(string pidrozdil)
+        public static string DepartmentInGenitive(string pidrozdil)
         {
             pidrozdil = pidrozdil.Replace("Адміністративно-господарська частина", "адміністративно-господарської частини");
             pidrozdil = pidrozdil.Replace("чний", "чного");
@@ -248,23 +248,32 @@ namespace HourlyManagment
 
         public static string DepartmentInLocative(string pidrozdil)
         {            
-            pidrozdil = pidrozdil.Replace("кафедра", "кафедрі");
-            pidrozdil = pidrozdil.Replace("Центр", "центрі");
-            pidrozdil = pidrozdil.Replace("Відділ", "відділі");
+            pidrozdil = pidrozdil.Replace("кафедра", "на кафедрі");
+            pidrozdil = pidrozdil.Replace("Центр", "в центрі");
+            pidrozdil = pidrozdil.Replace("Відділ", "у відділі");
             return pidrozdil;
         }
+        public static string DepartmentInAkkuzative(string pidrozdil)
+        {
+            pidrozdil = pidrozdil.Replace("кафедра", "на кафедру");
+            pidrozdil = pidrozdil.Replace("Центр", "у центр");
+            pidrozdil = pidrozdil.Replace("Відділ", "у відділ");
+            pidrozdil = pidrozdil.Replace("Відділ", "у відділ");
+            return pidrozdil;
+        }
+
         public static string JobInAkkuzative(string posada, string pidrozdil)
         {
             if (posada.IndexOf("кафедри") != -1)
             {
                 if (posada.IndexOf("в.о.") != -1)
                 {
-                    return $"в.о. завідувача " + DepartmentInAkkuzative(pidrozdil) +
+                    return $"в.о. завідувача " + DepartmentInGenitive(pidrozdil) +
                         JobInAkkuzative(posada.Substring(posada.LastIndexOf(" ") + 1), "");
                 }
                 else
                 {
-                    return $"завідувача " + DepartmentInAkkuzative(pidrozdil) +
+                    return $"завідувача " + DepartmentInGenitive(pidrozdil) +
                         JobInAkkuzative(posada.Substring(posada.LastIndexOf(" ") + 1), "");
                 }
             }
@@ -342,7 +351,6 @@ namespace HourlyManagment
             posada = posada.Replace(" навчальними лабораторіями", "");
             posada = posada.Replace("бібліотекар", "бібліотекаря");
             posada = posada.Replace("бібліограф", "бібліографа");
-            posada = posada.Replace("директор", "директора");
             posada = posada.Replace("оператор", "оператора");
             posada = posada.Replace("редактор", "редактора");
             posada = posada.Replace("комірник", "комірника");
@@ -356,7 +364,7 @@ namespace HourlyManagment
 
 
             //склоняем место работы
-            pidrozdil = DepartmentInAkkuzative(pidrozdil);
+            pidrozdil = DepartmentInGenitive(pidrozdil);
 
             //результат
             res = posada + " " + pidrozdil;

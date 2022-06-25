@@ -49,9 +49,7 @@ namespace HourlyManagment
             for (int i = 0; i < n; i++)
             {
                 paragraphs[i].MakeParagraphs(document, i+1);
-            }
-                        
-                        
+            }           
         }
         public void SetDocNumberDate(string num, string date)
         {

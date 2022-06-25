@@ -43,7 +43,7 @@ namespace HourlyManagment
             }
             else
             {
-                res += $"на {Declenser.DepartmentInLocative(p.assignments[0].Department)}";
+                res += $"{Declenser.DepartmentInAkkuzative(p.assignments[0].Department)}";
             }
             if (increase)
             {

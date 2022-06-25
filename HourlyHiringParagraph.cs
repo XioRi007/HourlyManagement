@@ -37,9 +37,9 @@ namespace HourlyManagment
                 $"дозволити з {p.assignments[0].DateFrom} по {p.assignments[0].DateTo} ";
                 
             }
-            res+= $"роботу ";
             if (p.assignments[0].Job != "")
             {
+                res += $"роботу ";
                 if (p.assignments[0].Department == "предметна екзаменаційна комісія")
                 {
                     res += $"в якості {Declenser.JobInAkkuzative(p.assignments[0].Job, p.assignments[0].Department)} ";
@@ -51,7 +51,15 @@ namespace HourlyManagment
             }
             else
             {
-                res += $"на {Declenser.DepartmentInLocative(p.assignments[0].Department)} ";
+                if (p.assignments[0].Department.IndexOf("кафедр") == -1)
+                {
+                    res += $" роботу {Declenser.DepartmentInLocative(p.assignments[0].Department)} ";
+                }
+                else
+                {
+                    res += $"{Declenser.DepartmentInAkkuzative(p.assignments[0].Department)} ";
+                }
+                
             }
             res += $"для {p.assignments[0].Purpose} на умовах погодинної оплати праці " +
                     $"в обсязі {p.assignments[0].Hours} годин.";
@@ -69,9 +77,6 @@ namespace HourlyManagment
             wordParag1.Range.Text = res;
             wordParag1.Range.Paragraphs.Alignment = Microsoft.Office.Interop.Word.WdParagraphAlignment.wdAlignParagraphJustify;
             document.Paragraphs.Add(Type.Missing).Format.FirstLineIndent = 35F;
-        }        
-        
-        
-
+        }   
     }
 }

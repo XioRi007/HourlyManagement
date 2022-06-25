@@ -41,7 +41,7 @@ namespace HourlyManagment
             }
             else
             {
-                res += $"на {Declenser.DepartmentInLocative(p.assignments[0].Department)} для {p.assignments[0].Purpose}, ";
+                res += $"{Declenser.DepartmentInLocative(p.assignments[0].Department)} для {p.assignments[0].Purpose}, ";
             }
             res += $"звільнити {p.assignments[0].DateTo} з умов погодинної оплати праці за власним бажанням, ст. 38 КЗпП України.";
 

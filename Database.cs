@@ -240,11 +240,10 @@ namespace HourlyManagment
         }
 
         public List<string> GetPurposes()
-        {
-            
+        {            
             OleDbDataReader dbReader;
             List<string> res = new List<string>();
-            string query = $"SELECT * FROM Purposes;";
+            string query = $"SELECT * FROM Purpose;";
             OleDbCommand dbCommand = new OleDbCommand(query, dbConnection); // команда
             dbReader = dbCommand.ExecuteReader();
             // Проверяем данные
@@ -258,21 +257,25 @@ namespace HourlyManagment
                 {
                     res.Add(dbReader["Purpose"].ToString());
                 }
-
             }
-            dbReader.Close();
-            
+            dbReader.Close();            
             return res;
         }
 
         public void AddAssignment(int PersonId, Assignment a)
         {
+            string purpose = a.Purpose;
+            if (purpose.IndexOf("'") != -1)
+            {
+                purpose = purpose.Replace("'", "\'");
+            }
             string query = $"INSERT INTO Assignment (PersonId, Type, Job, " +
             $"DepartmentId, Purpose, DateFrom, DateTo, Hours, DocumentNumber, DocumentDate) " +
             $"VALUES ({PersonId}, '{a.Type}','{a.Job}', DMin(\"DepartmentId\", \"Department\", \"DepartmentName='{a.Department}'\")," +
-            $"'{a.Purpose}','{a.DateFrom}','{a.DateTo}'," +
-            $"{a.Hours},'{a.DocumentNumber}','{a.DocumentDate}');";
+            $"\"{purpose}\",'{a.DateFrom}','{a.DateTo}'," +
+            $"@hours,'{a.DocumentNumber}','{a.DocumentDate}');";
             OleDbCommand dbCommand = new OleDbCommand(query, dbConnection); // команда
+            dbCommand.Parameters.Add(new OleDbParameter("@hours", a.Hours));
             dbCommand.ExecuteNonQuery();            
             
         }
@@ -286,13 +289,20 @@ namespace HourlyManagment
         }
         public void UpdateAssignment(Assignment a)
         {
+            string purpose = a.Purpose;
+            if (purpose.IndexOf("'") != -1)
+            {
+                purpose = purpose.Replace("'", "\'");
+            }
             string query = $"Update Assignment " +
                 $"SET Type='{a.Type}', Job='{a.Job}', " +
-            $"DepartmentId=DMin(\"DepartmentId\", \"Department\", \"DepartmentName='{a.Department}'\"), Purpose='{a.Purpose}', " +
+            $"DepartmentId=DMin(\"DepartmentId\", \"Department\", \"DepartmentName='{a.Department}'\"), " +
+            $"Purpose=\"{purpose}\", " +
             $"DateFrom='{a.DateFrom}', DateTo='{a.DateTo}', " +
-            $"Hours={a.Hours}, DocumentNumber='{a.DocumentNumber}', DocumentDate='{a.DocumentDate}' " +
+            $"Hours=@hours, DocumentNumber='{a.DocumentNumber}', DocumentDate='{a.DocumentDate}' " +
                 $"WHERE AssignmentId={a.AssignmentId};";
             OleDbCommand dbCommand = new OleDbCommand(query, dbConnection); // команда
+            dbCommand.Parameters.Add(new OleDbParameter("@hours",a.Hours));
             dbCommand.ExecuteNonQuery();
             
         }
