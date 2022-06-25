@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace HourlyManagment
 {
-    public partial class AddPersonForm : Form
+    public partial class AddPersonForm : IPersonForm
     {
-        private Database db;
         public AddPersonForm()
         {
-            InitializeComponent();
             SubmitBtn.BackColor = Color.White;
-            db = Database.GetDatabase();
+            SubmitBtn.Click += SubmitBtn_Click;
+            SubmitBtn.Text = "Додати";
+            Text = "Додати працівника";
             FullNameTextBox.Text = "";
             JobTextBox.Text = "";
             WorkPlaceTextBox.Text = "";
@@ -38,11 +38,6 @@ namespace HourlyManagment
             Form f = new PersonForm(id);
             f.Show();
             this.Close();
-        }
-
-        private void AddPersonForm_Load(object sender, EventArgs e)
-        {
-
-        }
+        }        
     }
 }

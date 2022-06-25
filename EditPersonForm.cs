@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace HourlyManagment
 {
-    public partial class EditPersonForm : Form
+    public partial class EditPersonForm : IPersonForm
     {
-        private Database db;
         private int PersonId;
         public EditPersonForm(Person p)
         {
-            InitializeComponent();
             SubmitBtn.BackColor = Color.White;
+            SubmitBtn.Click += SubmitBtn_Click;
+            SubmitBtn.Text = "Редагувати";
+            Text = "Редагувати працівника";
             PersonId = p.PersonId;
-            db = Database.GetDatabase();
             FullNameTextBox.Text = p.FullName;
             JobTextBox.Text = p.Job;
             WorkPlaceTextBox.Text = p.WorkPlace;
@@ -38,11 +38,6 @@ namespace HourlyManagment
                                 ForeignCheckBox.Checked, PersonId);
             db.UpdatePerson(p);
             this.Close();
-        }
-
-        private void EditPersonForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

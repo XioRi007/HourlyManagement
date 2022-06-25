@@ -29,20 +29,6 @@ namespace HourlyManagment
 
         private void PersonForm_Load(object sender, EventArgs e)
         {
-            /*for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                var cell = ((DataGridViewButtonCell)dataGridView1.Rows[i].Cells[9]);
-                cell.FlatStyle = FlatStyle.Flat;
-                dataGridView1.Rows[i].Cells[9].Style.BackColor = Color.White;
-
-                cell = ((DataGridViewButtonCell)dataGridView1.Rows[i].Cells[10]);
-                cell.FlatStyle = FlatStyle.Flat;
-                dataGridView1.Rows[i].Cells[10].Style.BackColor = Color.White;
-
-                cell = ((DataGridViewButtonCell)dataGridView1.Rows[i].Cells[11]);
-                cell.FlatStyle = FlatStyle.Flat;
-                dataGridView1.Rows[i].Cells[11].Style.BackColor = Color.White;
-            }*/
             try
             {
                 person = db.GetPersonById(PersonId);
@@ -104,7 +90,6 @@ namespace HourlyManagment
                 var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
                 var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
 
-                //e.Graphics.DrawImage(Properties.Resources.ChangeImage, new Rectangle(x, y, w, h));
                 e.Graphics.DrawImage(Properties.Resources.ChangeImage, new Rectangle(x, y, w, h));
                 e.Handled = true;
             }
