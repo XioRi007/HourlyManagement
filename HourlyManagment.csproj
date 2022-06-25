@@ -53,6 +53,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAsignmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAsignmentForm.Designer.cs">
+      <DependentUpon>AddAsignmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AsignmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignmentForm.Designer.cs">
+      <DependentUpon>AsignmentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateDocumentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +72,12 @@
       <DependentUpon>CreateDocumentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Document.cs" />
+    <Compile Include="EditAsignmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditAsignmentForm.Designer.cs">
+      <DependentUpon>EditAsignmentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditPersonForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,18 +89,6 @@
     </Compile>
     <Compile Include="AddPersonForm.Designer.cs">
       <DependentUpon>AddPersonForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EditAsignmentForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditAsignmentForm.Designer.cs">
-      <DependentUpon>EditAsignmentForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddAsignmentForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddAsignmentForm.Designer.cs">
-      <DependentUpon>AddAsignmentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Assignment.cs" />
     <Compile Include="Database.cs" />
@@ -114,20 +120,23 @@
       <DependentUpon>SearchForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Declenser.cs" />
+    <EmbeddedResource Include="AddAsignmentForm.resx">
+      <DependentUpon>AddAsignmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsignmentForm.resx">
+      <DependentUpon>AsignmentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateDocumentForm.resx">
       <DependentUpon>CreateDocumentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAsignmentForm.resx">
+      <DependentUpon>EditAsignmentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditPersonForm.resx">
       <DependentUpon>EditPersonForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddPersonForm.resx">
       <DependentUpon>AddPersonForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditAsignmentForm.resx">
-      <DependentUpon>EditAsignmentForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddAsignmentForm.resx">
-      <DependentUpon>AddAsignmentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

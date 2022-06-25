@@ -101,6 +101,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FullNameColumn,
@@ -129,14 +130,14 @@
             this.JobColumn.HeaderText = "Посада";
             this.JobColumn.Name = "JobColumn";
             this.JobColumn.ReadOnly = true;
-            this.JobColumn.Width = 350;
+            this.JobColumn.Width = 275;
             // 
             // WorkPlaceColumn
             // 
             this.WorkPlaceColumn.HeaderText = "Місце основної роботи";
             this.WorkPlaceColumn.Name = "WorkPlaceColumn";
             this.WorkPlaceColumn.ReadOnly = true;
-            this.WorkPlaceColumn.Width = 425;
+            this.WorkPlaceColumn.Width = 480;
             // 
             // BtnColumn
             // 
@@ -149,7 +150,6 @@
             // 
             // SearchForm
             // 
-            this.Icon = Properties.Resources.Hourglass;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
@@ -159,6 +159,7 @@
             this.Controls.Add(this.SubmitBtn);
             this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.SearchTypeComboBox);
+            this.Icon = global::HourlyManagment.Properties.Resources.Hourglass;
             this.Name = "SearchForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Пошук";
@@ -168,7 +169,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
 
         }
 
