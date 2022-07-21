@@ -23,6 +23,7 @@ namespace HourlyManagment
             SubmitBtn.BackColor = Color.White;
             //get deps
             List<string> deps = db.GetDepartments();
+            WorkPlaceTextBox.Items.Add("");
             foreach (var dep in deps)
             {
                 WorkPlaceTextBox.Items.Add(dep);
