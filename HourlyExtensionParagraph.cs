@@ -42,7 +42,7 @@ namespace HourlyManagment
             }
             else
             {
-                res += $"{Declenser.DepartmentInAkkuzative(p.assignments[0].Department)} для {p.assignments[0].Purpose} ";
+                res += $"{Declenser.DepartmentInLocative(p.assignments[0].Department)} для {p.assignments[0].Purpose} ";
             }
             res += $"продовжити термін роботи по {p.assignments[0].DateTo}, у зв’язку з виробничою необхідністю.";
 

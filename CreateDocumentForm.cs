@@ -14,7 +14,7 @@ namespace HourlyManagment
     {
         List<Tuple<string, string>> docs;
         Database db;
-        Document doc;
+        
         public CreateDocumentForm()
         {
             InitializeComponent();
@@ -33,14 +33,18 @@ namespace HourlyManagment
                 
                 Tuple<string, string> d = docs[DocumentComboBox.SelectedIndex];
                 List<Person> ls = db.GetPeopleByDocument(d.Item1, d.Item2);
-                doc = new Document();
+                OrderDocument doc = new OrderDocument();
+                ExtractDocument extract = new ExtractDocument();
                 HourlyParagraphFabric fabric = new HourlyParagraphFabric();
                 ls.ForEach((p) =>
                 {
                     doc.AddParagraph(fabric.GetParagraph(p));
+                    extract.AddParagraph(fabric.GetParagraph(p));
                 });
-                doc.CreateDocument();
                 doc.SetDocNumberDate(d.Item1, d.Item2);
+                extract.SetDocNumberDate(d.Item1, d.Item2);
+                doc.CreateDocument();
+                extract.CreateDocument();
                 SaveFileDialog saveFileDialog1 = new SaveFileDialog();
                 saveFileDialog1.Filter = "Word document|*.doc";
                 saveFileDialog1.Title = "Зберегти наказ";
@@ -51,6 +55,7 @@ namespace HourlyManagment
                     if (docName.Length > 0)
                     {
                         doc.Save(docName);
+                        extract.Save("extracts");
                     }
                 }
             }

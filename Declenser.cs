@@ -36,6 +36,12 @@ namespace HourlyManagment
             
             return name;
         }
+        public static string FullNameInGenitive(string name, string gender)
+        {
+            NameCaseLib.Gender g = GetGender(gender);
+            name = ua.Q(name, NameCaseLib.Padeg.UaRodovyi, g);     
+            return name;
+        }
         public static string FullNameInAkkuzative(string name, string gender)
         {
             NameCaseLib.Gender g = GetGender(gender);
@@ -80,13 +86,13 @@ namespace HourlyManagment
             {
                 if(posada.IndexOf("в.о.") != -1)
                 {
-                    return $"в.о. завідувача " + DepartmentInGenitive(pidrozdil) +
-                        JobInDative(posada.Substring(posada.LastIndexOf(" ") + 1), "");
+                    return $"в.о. завідувача " + DepartmentInGenitive(pidrozdil) + ", "+
+                        JobInDative(posada.Substring(posada.LastIndexOf(" ")), "");
                 }
                 else
                 {
-                    return $"завідувачу " + DepartmentInGenitive(pidrozdil) +
-                        JobInDative(posada.Substring(posada.LastIndexOf(" ") + 1), "");
+                    return $"завідувачу " + DepartmentInGenitive(pidrozdil) + ", " +
+                        JobInDative(posada.Substring(posada.LastIndexOf(" ")), "");
                 }
             }
             string res = "";

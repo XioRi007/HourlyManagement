@@ -29,10 +29,9 @@
         protected void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.JobTextBox = new System.Windows.Forms.ComboBox();
             this.AdditionalInfoTextBox = new System.Windows.Forms.TextBox();
             this.DegreeTextBox = new System.Windows.Forms.TextBox();
-            this.WorkPlaceTextBox = new System.Windows.Forms.TextBox();
-            this.JobTextBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.RankComboBox = new System.Windows.Forms.ComboBox();
             this.ForeignCheckBox = new System.Windows.Forms.CheckBox();
             this.FullNameTextBox = new System.Windows.Forms.TextBox();
+            this.WorkPlaceTextBox = new System.Windows.Forms.ComboBox();
             this.SubmitBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -54,10 +54,9 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.JobTextBox, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.AdditionalInfoTextBox, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.DegreeTextBox, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.WorkPlaceTextBox, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.JobTextBox, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label15, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.label13, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 6);
@@ -70,6 +69,7 @@
             this.tableLayoutPanel1.Controls.Add(this.RankComboBox, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.ForeignCheckBox, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.FullNameTextBox, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.WorkPlaceTextBox, 1, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -87,6 +87,21 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(500, 428);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // JobTextBox
+            // 
+            this.JobTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.JobTextBox.FormattingEnabled = true;
+            this.JobTextBox.Items.AddRange(new object[] {
+            "",
+            "викладач",
+            "старший викладач",
+            "доцент",
+            "професор"});
+            this.JobTextBox.Location = new System.Drawing.Point(123, 98);
+            this.JobTextBox.Name = "JobTextBox";
+            this.JobTextBox.Size = new System.Drawing.Size(374, 31);
+            this.JobTextBox.TabIndex = 3;
+            // 
             // AdditionalInfoTextBox
             // 
             this.AdditionalInfoTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -102,22 +117,6 @@
             this.DegreeTextBox.Name = "DegreeTextBox";
             this.DegreeTextBox.Size = new System.Drawing.Size(374, 32);
             this.DegreeTextBox.TabIndex = 21;
-            // 
-            // WorkPlaceTextBox
-            // 
-            this.WorkPlaceTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.WorkPlaceTextBox.Location = new System.Drawing.Point(123, 137);
-            this.WorkPlaceTextBox.Name = "WorkPlaceTextBox";
-            this.WorkPlaceTextBox.Size = new System.Drawing.Size(374, 32);
-            this.WorkPlaceTextBox.TabIndex = 20;
-            // 
-            // JobTextBox
-            // 
-            this.JobTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.JobTextBox.Location = new System.Drawing.Point(123, 87);
-            this.JobTextBox.Name = "JobTextBox";
-            this.JobTextBox.Size = new System.Drawing.Size(374, 32);
-            this.JobTextBox.TabIndex = 19;
             // 
             // label15
             // 
@@ -253,6 +252,15 @@
             this.FullNameTextBox.Size = new System.Drawing.Size(374, 32);
             this.FullNameTextBox.TabIndex = 18;
             // 
+            // WorkPlaceTextBox
+            // 
+            this.WorkPlaceTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.WorkPlaceTextBox.FormattingEnabled = true;
+            this.WorkPlaceTextBox.Location = new System.Drawing.Point(123, 148);
+            this.WorkPlaceTextBox.Name = "WorkPlaceTextBox";
+            this.WorkPlaceTextBox.Size = new System.Drawing.Size(374, 31);
+            this.WorkPlaceTextBox.TabIndex = 23;
+            // 
             // SubmitBtn
             // 
             this.SubmitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -265,7 +273,7 @@
             this.SubmitBtn.Text = "Оновити";
             this.SubmitBtn.UseVisualStyleBackColor = true;
             // 
-            // EditPersonForm
+            // IPersonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -278,7 +286,6 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "IPersonForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -299,11 +306,11 @@
         protected System.Windows.Forms.Label label1;
         protected System.Windows.Forms.TextBox AdditionalInfoTextBox;
         protected System.Windows.Forms.TextBox DegreeTextBox;
-        protected System.Windows.Forms.TextBox WorkPlaceTextBox;
-        protected System.Windows.Forms.TextBox JobTextBox;
         protected System.Windows.Forms.ComboBox GenderComboBox;
         protected System.Windows.Forms.ComboBox RankComboBox;
         protected System.Windows.Forms.CheckBox ForeignCheckBox;
         protected System.Windows.Forms.TextBox FullNameTextBox;
+        protected System.Windows.Forms.ComboBox JobTextBox;
+        protected System.Windows.Forms.ComboBox WorkPlaceTextBox;
     }
 }

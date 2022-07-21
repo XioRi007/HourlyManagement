@@ -28,44 +28,18 @@ namespace HourlyManagment
             string res = "";
             if (p.IsForeign)
             {
-                res += FormatNameRankDegreeJobInAkkuzative() +
-                $"прийняти з {p.assignments[0].DateFrom} по {p.assignments[0].DateTo} на ";
+                res += FormatNameRankDegreeJobInAkkuzative() + $"прийняти ";
             }
             else
             {
-                res += FormatNameRankDegreeJobInDative() +
-                $"дозволити з {p.assignments[0].DateFrom} по {p.assignments[0].DateTo} ";
-                
+                res += FormatNameRankDegreeJobInDative() + $"дозволити ";                
             }
-            if (p.assignments[0].Job != "")
-            {
-                res += $"роботу ";
-                if (p.assignments[0].Department == "предметна екзаменаційна комісія")
-                {
-                    res += $"в якості {Declenser.JobInAkkuzative(p.assignments[0].Job, p.assignments[0].Department)} ";
-                }
-                else
-                {
-                    res += $"на посаді {Declenser.JobInAkkuzative(p.assignments[0].Job, p.assignments[0].Department)} ";
-                }                
-            }
-            else
-            {
-                if (p.assignments[0].Department.IndexOf("кафедр") == -1)
-                {
-                    res += $" роботу {Declenser.DepartmentInLocative(p.assignments[0].Department)} ";
-                }
-                else
-                {
-                    res += $"{Declenser.DepartmentInAkkuzative(p.assignments[0].Department)} ";
-                }
-                
-            }
+            res+= $"з {p.assignments[0].DateFrom} по {p.assignments[0].DateTo} ";
+            res += FormatHourlyJob();            
             res += $"для {p.assignments[0].Purpose} на умовах погодинної оплати праці " +
                     $"в обсязі {p.assignments[0].Hours} годин.";
 
-
-
+            //creating Word Paragraph
             Word.Paragraph wordParag1 = document.Paragraphs.Add(Type.Missing);
             wordParag1.Format.FirstLineIndent = 35F;
             wordParag1.Range.Font.Name = "Times New Roman";
@@ -77,6 +51,39 @@ namespace HourlyManagment
             wordParag1.Range.Text = res;
             wordParag1.Range.Paragraphs.Alignment = Microsoft.Office.Interop.Word.WdParagraphAlignment.wdAlignParagraphJustify;
             document.Paragraphs.Add(Type.Missing).Format.FirstLineIndent = 35F;
-        }   
+        } 
+        private string FormatHourlyJob()
+        {
+            string res = "";
+            if (!p.IsForeign)
+            {
+                res += "на ";
+            }
+            if (p.assignments[0].Job != "")//посада
+            {
+                res += $"роботу ";
+                if (p.assignments[0].Department == "предметна екзаменаційна комісія")
+                {
+                    res += $"в якості {Declenser.JobInAkkuzative(p.assignments[0].Job, p.assignments[0].Department)} ";
+                }
+                else
+                {
+                    res += $"на посаді {Declenser.JobInAkkuzative(p.assignments[0].Job, p.assignments[0].Department)} ";
+                }
+            }
+            else//голова ЕК 
+            {
+                if (p.assignments[0].Department.IndexOf("кафедр") == -1)//центри/відділи
+                {
+                    res += $"роботу {Declenser.DepartmentInLocative(p.assignments[0].Department)} ";
+                }
+                else
+                {
+                    res += $"{Declenser.DepartmentInAkkuzative(p.assignments[0].Department)} ";
+                }
+
+            }
+            return res;
+        }
     }
 }

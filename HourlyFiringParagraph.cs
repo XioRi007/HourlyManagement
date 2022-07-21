@@ -37,7 +37,7 @@ namespace HourlyManagment
             }
             if (p.assignments[0].Job != "")
             {
-                res += $"на посаді {Declenser.JobInAkkuzative(p.assignments[0].Job, p.assignments[0].Department)} ";
+                res += $"на посаді {Declenser.JobInAkkuzative(p.assignments[0].Job, p.assignments[0].Department)}, ";
             }
             else
             {

@@ -18,5 +18,15 @@ namespace HourlyManagment
             InitializeComponent();
             db = Database.GetDatabase();
         }
+        protected void _Load()
+        {
+            SubmitBtn.BackColor = Color.White;
+            //get deps
+            List<string> deps = db.GetDepartments();
+            foreach (var dep in deps)
+            {
+                WorkPlaceTextBox.Items.Add(dep);
+            }
+        }
     }
 }

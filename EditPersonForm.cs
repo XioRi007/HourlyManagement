@@ -15,7 +15,7 @@ namespace HourlyManagment
         private int PersonId;
         public EditPersonForm(Person p)
         {
-            SubmitBtn.BackColor = Color.White;
+            _Load();
             SubmitBtn.Click += SubmitBtn_Click;
             SubmitBtn.Text = "Редагувати";
             Text = "Редагувати працівника";

@@ -71,13 +71,15 @@
     <Compile Include="CreateDocumentForm.Designer.cs">
       <DependentUpon>CreateDocumentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Document.cs" />
+    <Compile Include="DocumentWithParagraphs.cs" />
     <Compile Include="EditAsignmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditAsignmentForm.Designer.cs">
       <DependentUpon>EditAsignmentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExtractDocument.cs" />
+    <Compile Include="IDocument.cs" />
     <Compile Include="IPersonForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +105,7 @@
     <Compile Include="HourlyIncreasingParagraph.cs" />
     <Compile Include="HourlyHiringParagraph.cs" />
     <Compile Include="HourlyParagraphFabric.cs" />
+    <Compile Include="OrderDocument.cs" />
     <Compile Include="Paragraph.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -126,6 +129,7 @@
       <DependentUpon>SearchForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Declenser.cs" />
+    <Compile Include="Settings.cs" />
     <EmbeddedResource Include="AddAsignmentForm.resx">
       <DependentUpon>AddAsignmentForm.cs</DependentUpon>
     </EmbeddedResource>

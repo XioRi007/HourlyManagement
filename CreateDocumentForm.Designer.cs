@@ -70,7 +70,7 @@ namespace HourlyManagment
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.DocumentComboBox, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.submitBtn, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(107, 186);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(135, 199);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -80,13 +80,13 @@ namespace HourlyManagment
             // 
             // CreateDocumentForm
             // 
-            this.Icon = Properties.Resources.Hourglass;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(500, 550);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Icon = global::HourlyManagment.Properties.Resources.Hourglass;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "CreateDocumentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

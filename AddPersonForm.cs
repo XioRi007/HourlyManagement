@@ -14,13 +14,13 @@ namespace HourlyManagment
     {
         public AddPersonForm()
         {
-            SubmitBtn.BackColor = Color.White;
+            _Load();
             SubmitBtn.Click += SubmitBtn_Click;
             SubmitBtn.Text = "Додати";
             Text = "Додати працівника";
             FullNameTextBox.Text = "";
-            JobTextBox.Text = "";
-            WorkPlaceTextBox.Text = "";
+            JobTextBox.SelectedIndex = 0;
+            WorkPlaceTextBox.SelectedIndex = 0;
             RankComboBox.SelectedIndex = 0;
             DegreeTextBox.Text = "";
             AdditionalInfoTextBox.Text = "";

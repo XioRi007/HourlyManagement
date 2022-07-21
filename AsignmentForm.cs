@@ -47,5 +47,7 @@ namespace HourlyManagment
                 PurposeComboBox.Items.Add(p);
             }
         }
+
+        
     }
 }

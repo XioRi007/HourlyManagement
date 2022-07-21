@@ -30,10 +30,10 @@ namespace HourlyManagment
         protected void MakePersonReason()
         {
             string res = "";
-            string name = Declenser.FullNameInAkkuzative(p.FullName, p.Gender);
+            string name = Declenser.FullNameInGenitive(p.FullName, p.Gender);
             string[] words = name.Split(' ');
 
-            res = "Підстава: Заява " + words[0] + " " + words[1][0] + "." + words[2][0] + ".";
+            res = "Підстава: заява " + words[0] + " " + words[1][0] + "." + words[2][0] + ".";
             Word.Paragraph wordPara2 = document.Paragraphs.Add(Type.Missing);
             wordPara2.Format.FirstLineIndent = 35F;
             wordPara2.Range.ParagraphFormat.LineUnitAfter = 0.1F;
@@ -105,7 +105,7 @@ namespace HourlyManagment
                     {
                         res += ", " + Declenser.RankInAkkuzative(p.Rank);
                     }
-                    res += " ";
+                    res += ", ";
                 }
             }
             return res;
@@ -127,7 +127,7 @@ namespace HourlyManagment
                 {
                     res += ", " + Declenser.RankInDative(p.Rank);
                 }
-                res += " ";
+                res += ", ";
             }
             return res;
         }
