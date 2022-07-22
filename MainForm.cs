@@ -46,8 +46,15 @@ namespace HourlyManagment
         private void Form1_Load(object sender, EventArgs e)
         {
             SearchButton.BackColor = Color.White;
+            settingsBtn.BackColor = Color.White;
             AddWorkerButton.BackColor = Color.White;
             CreateDocumentButton.BackColor = Color.White;
+        }
+
+        private void settingsBtn_Click(object sender, EventArgs e)
+        {
+            Form f = new SettingsForm();
+            f.Show();
         }
     }
 }

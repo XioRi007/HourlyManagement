@@ -18,6 +18,16 @@ namespace HourlyManagment
             this.a = a;
             SubmitBtn.Click += SubmitBtn_Click;
             this.Load += EditAsignmentForm_Load;
+            this.FormClosed += AsignmentForm_FormClosed;
+        }
+        protected void AsignmentForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form frm = Application.OpenForms["PersonForm"];
+            frm.Close();
+            frm = new PersonForm(PersonId);
+            frm.Show();
+            frm = Application.OpenForms["SearchForm"];
+            frm.Hide();
         }
         private void EditAsignmentForm_Load(object sender, EventArgs e)
         {

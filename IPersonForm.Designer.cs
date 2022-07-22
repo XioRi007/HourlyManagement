@@ -28,6 +28,24 @@
         /// </summary>
         protected void InitializeComponent()
         {
+            // 
+            // IPersonForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Info;
+            this.ClientSize = new System.Drawing.Size(500, 550);
+            this.Controls.Add(this.SubmitBtn);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Icon = global::HourlyManagment.Properties.Resources.Hourglass;
+            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.Name = "IPersonForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.ResumeLayout(false);
+
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.JobTextBox = new System.Windows.Forms.ComboBox();
             this.AdditionalInfoTextBox = new System.Windows.Forms.TextBox();
@@ -272,23 +290,7 @@
             this.SubmitBtn.TabIndex = 2;
             this.SubmitBtn.Text = "Оновити";
             this.SubmitBtn.UseVisualStyleBackColor = true;
-            // 
-            // IPersonForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(500, 550);
-            this.Controls.Add(this.SubmitBtn);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Icon = global::HourlyManagment.Properties.Resources.Hourglass;
-            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.Name = "IPersonForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.ResumeLayout(false);
+            
 
         }
 

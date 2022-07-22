@@ -32,6 +32,7 @@ namespace HourlyManagment
             this.SearchButton = new System.Windows.Forms.Button();
             this.AddWorkerButton = new System.Windows.Forms.Button();
             this.CreateDocumentButton = new System.Windows.Forms.Button();
+            this.settingsBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SearchButton
@@ -77,21 +78,33 @@ namespace HourlyManagment
             this.CreateDocumentButton.UseVisualStyleBackColor = true;
             this.CreateDocumentButton.Click += new System.EventHandler(this.CreateDocumentButton_Click);
             // 
+            // settingsBtn
+            // 
+            this.settingsBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.settingsBtn.Image = global::HourlyManagment.Properties.Resources.SettingsIcon;
+            this.settingsBtn.Location = new System.Drawing.Point(1192, 12);
+            this.settingsBtn.Name = "settingsBtn";
+            this.settingsBtn.Size = new System.Drawing.Size(76, 41);
+            this.settingsBtn.TabIndex = 4;
+            this.settingsBtn.UseVisualStyleBackColor = true;
+            this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.settingsBtn);
             this.Controls.Add(this.CreateDocumentButton);
             this.Controls.Add(this.AddWorkerButton);
             this.Controls.Add(this.SearchButton);
+            this.Icon = global::HourlyManagment.Properties.Resources.Hourglass;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Погодинка";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-            this.Icon = Properties.Resources.Hourglass;
 
         }
 
@@ -100,6 +113,7 @@ namespace HourlyManagment
         private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.Button AddWorkerButton;
         private System.Windows.Forms.Button CreateDocumentButton;
+        private System.Windows.Forms.Button settingsBtn;
     }
 }
 

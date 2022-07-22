@@ -21,15 +21,7 @@ namespace HourlyManagment
             InitializeComponent();
             db = Database.GetDatabase();
         }
-        protected void AddAsignmentForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Form frm = Application.OpenForms["PersonForm"];            
-            frm.Close();
-            frm = new PersonForm(PersonId);
-            frm.Show();
-            frm = Application.OpenForms["SearchForm"];
-            frm.Hide();
-        }
+        
 
         protected void _Load()
         {

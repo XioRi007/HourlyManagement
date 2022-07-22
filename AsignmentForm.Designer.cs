@@ -325,7 +325,6 @@
             this.Name = "AsignmentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Додати призначення";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddAsignmentForm_FormClosed);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
